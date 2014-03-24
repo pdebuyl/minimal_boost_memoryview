@@ -1,0 +1,21 @@
+# Copyright David Abrahams 2006. Distributed under the Boost
+# Software License, Version 1.0. (See accompanying
+# file LICENSE_1_0.txt or copy at http://www.boost.org/LICENSE_1_0.txt)
+
+import python ;
+using python ;
+
+# Declare libboost_python
+lib libboost_python : : <name>boost_python ;
+
+# Set up the project for the boost_python library.
+project minimal_mv
+  : requirements <library>libboost_python
+  : build-dir _build
+  ;
+
+# Declare python extension
+python-extension mymv_ext : mymv.cpp : <location>_build ;
+
+
+

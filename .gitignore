@@ -1,0 +1,7 @@
+*~
+*.o
+*.py[ocd]
+*.a
+.DS_Store?
+
+_build/
